@@ -132,10 +132,9 @@
 /* Стиль для всего VBox */
 VBox {
     -fx-background-color: #f0f0f0; /* Цвет фона */
-    -fx-padding: 20; /* Отступы вокруг контейнера */
-    -fx-spacing: 20; /* Расстояние между элементами */
+    -fx-padding: 10; /* Отступы вокруг контейнера */
+    -fx-spacing: 10; /* Расстояние между элементами */
     -fx-alignment: center; /* Выравнивание по центру */
-    -fx-effect: dropshadow(3px, 3px, 3px, #888888); /* Эффект тени */
 }
 
 /* Стиль для заголовка */
@@ -145,24 +144,11 @@ VBox {
     -fx-text-fill: #333; /* Цвет текста */
 }
 
-.equals-button:hover {
-    -fx-background-color: #45A049; /* Цвет фона кнопки при наведении */
-}
-
 /* Стиль для ComboBox */
 ComboBox {
-    -fx-font-size: 16px; /* Размер шрифта */
-    -fx-pref-width: 150; /* Ширина ComboBox */
+    -fx-font-size: 14px; /* Размер шрифта */
+    -fx-pref-width: 205; /* Ширина ComboBox */
 }
-
-/* Стиль для TextField */
-TextField {
-    -fx-font-size: 16px; /* Размер шрифта */
-    -fx-pref-width: 100; /* Ширина текстового поля */
-}
-
-/* Стиль для Label */
-Label {
-    -fx-font-size: 16px; /* Размер шрифта */
-    -fx-text-fill: #333; /* Цвет текста */
+#toUnitComboBox {
+    -fx-translate-x: -14px; /* Смещение ComboBox влево на 10 пикселей */
 }
