@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.calc2.controller.UnitConverterController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label text="Unit Converter" styleClass="title-label" />
+
+    <HBox spacing="10">
+        <Label text="Select Category:" />
+        <ComboBox fx:id="categoryComboBox" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="From:" />
+        <TextField fx:id="fromTextField" />
+        <ComboBox fx:id="fromUnitComboBox" />
+    </HBox>
+
+    <HBox spacing="25">
+        <Label text="To:" />
+        <TextField fx:id="toTextField" />
+        <ComboBox fx:id="toUnitComboBox"/>
+    </HBox>
+
+    <Button text="Convert" onAction="#convertUnits" styleClass="equals-button"/>
+
+</VBox>

@@ -45,8 +45,10 @@
                 </VBox>
 
             </Tab>
-            <Tab text="Other Tab" closable="false">
-                <!-- Здесь поместите содержимое второй вкладки, если она есть. -->
+            <Tab text="Unit Converter" closable="false">
+                <content>
+                    <fx:include source="unitconverter.fxml" fx:id="unitconverterTab" />
+                </content>
             </Tab>
             <!-- Вы можете добавить сколько угодно вкладок, какие вам нужны. -->
         </tabs>
