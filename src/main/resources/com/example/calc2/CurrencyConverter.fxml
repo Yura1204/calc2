@@ -10,6 +10,7 @@
     </padding>
 
     <Label text="Currency Converter" styleClass="title-label" />
+    <Label text="Для работы требуется API ключ, введите его во вкладке Settings" styleClass="warning-label"/>
 
     <HBox spacing="10">
         <Label text="From:" />
@@ -23,6 +24,6 @@
         <ComboBox fx:id="toCurrencyComboBox" />
     </HBox>
 
-    <Button text="Convert" onAction="#convertCurrency" styleClass="convert-button"/>
+    <Button text="Convert" onAction="#convertCurrency" styleClass="equals-button"/>
 
 </VBox>

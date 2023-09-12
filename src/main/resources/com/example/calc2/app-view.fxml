@@ -25,7 +25,11 @@
                     <fx:include source="CurrencyConverter.fxml" />
                 </content>
             </Tab>
-
+            <Tab text="Settings" closable="false">
+                <content>
+                    <fx:include source="Settings.fxml" />
+                </content>
+            </Tab>
             <!-- Вы можете добавить сколько угодно вкладок, какие вам нужны. -->
         </tabs>
     </TabPane>

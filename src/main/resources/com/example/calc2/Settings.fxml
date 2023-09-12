@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.calc2.controller.SettingsController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label text="API Key" styleClass="title-label" />
+
+    <TextField fx:id="apiKeyTextField" promptText="Enter your API key" />
+    <Label text="Использовать Exchange Rates API" styleClass="warning-label" />
+    <Label text="Внимание: Нажав на кнопку «Save», приложение будет выключено." styleClass="warning-label" />
+    <Label text="Перезапустите его." styleClass="warning-label"/>
+    <Button text="Save" onAction="#saveApiKey" styleClass="equals-button" />
+</VBox>

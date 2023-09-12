@@ -152,3 +152,8 @@ ComboBox {
 #toUnitComboBox {
     -fx-translate-x: -14px; /* Смещение ComboBox влево на 10 пикселей */
 }
+
+.warning-label {
+    -fx-font-size: 11pt; /* Размер шрифта 12pt */
+    -fx-font-weight: bold; /* Жирный шрифт */
+}
