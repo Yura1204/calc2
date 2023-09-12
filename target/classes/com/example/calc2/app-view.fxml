@@ -20,6 +20,12 @@
                     <fx:include source="unitConverter.fxml" fx:id="unitConverterTab" />
                 </content>
             </Tab>
+            <Tab text="Currency Converter" closable="false">
+                <content>
+                    <fx:include source="CurrencyConverter.fxml" />
+                </content>
+            </Tab>
+
             <!-- Вы можете добавить сколько угодно вкладок, какие вам нужны. -->
         </tabs>
     </TabPane>
