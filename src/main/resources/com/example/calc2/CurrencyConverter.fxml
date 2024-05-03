@@ -20,7 +20,7 @@
 
     <HBox spacing="10">
         <Label text="To:" />
-        <TextField fx:id="toAmountTextField" />
+        <TextField fx:id="toAmountTextField" editable="false"/>
         <ComboBox fx:id="toCurrencyComboBox" />
     </HBox>
 
