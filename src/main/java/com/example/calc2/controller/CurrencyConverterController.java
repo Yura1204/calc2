@@ -6,8 +6,10 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class CurrencyConverterController {
 
@@ -56,14 +58,42 @@ public class CurrencyConverterController {
             fromCurrencyComboBox.getItems().addAll(currencies);
             toCurrencyComboBox.getItems().addAll(currencies);
 
-            // Установите значения по умолчанию для ComboBox'ов
-            fromCurrencyComboBox.setValue("USD");
-            toCurrencyComboBox.setValue("EUR");
+            fromCurrencyComboBox.getEditor().textProperty().addListener((observable, oldValue, newValue) -> {
+                if (newValue.isEmpty()) {
+                    fromCurrencyComboBox.getItems().clear();
+                    fromCurrencyComboBox.getItems().addAll(currencies);
+                } else {
+                    filterCurrencies(fromCurrencyComboBox, currencies, newValue);
+                    fromCurrencyComboBox.show();
+                }
+            });
+
+            toCurrencyComboBox.getEditor().textProperty().addListener((observable, oldValue, newValue) -> {
+                if (newValue.isEmpty()) {
+                    toCurrencyComboBox.getItems().clear();
+                    toCurrencyComboBox.getItems().addAll(currencies);
+                } else {
+                    filterCurrencies(toCurrencyComboBox, currencies, newValue);
+                    toCurrencyComboBox.show();
+                }
+            });
         } catch (Exception e) {
             // Обработка ошибки при загрузке курсов валют или API-ключа
             e.printStackTrace();
         }
     }
 
+    private void filterCurrencies(ComboBox<String> comboBox, List<String> currencies, String newValue) {
+        if (newValue.isEmpty()) {
+            comboBox.getItems().clear();
+            comboBox.getItems().addAll(currencies);
+        } else {
+            List<String> filteredCurrencies = currencies.stream()
+                    .filter(currency -> currency.toLowerCase().contains(newValue.toLowerCase()))
+                    .collect(Collectors.toList());
+            comboBox.getItems().clear();
+            comboBox.getItems().addAll(filteredCurrencies);
+        }
+    }
 
 }

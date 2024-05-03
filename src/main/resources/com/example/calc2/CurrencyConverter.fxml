@@ -15,13 +15,13 @@
     <HBox spacing="10">
         <Label text="From:" />
         <TextField fx:id="fromAmountTextField" />
-        <ComboBox fx:id="fromCurrencyComboBox" />
+        <ComboBox fx:id="fromCurrencyComboBox" editable="true" />
     </HBox>
 
     <HBox spacing="10">
         <Label text="To:" />
-        <TextField fx:id="toAmountTextField" />
-        <ComboBox fx:id="toCurrencyComboBox" />
+        <TextField fx:id="toAmountTextField" editable="false" />
+        <ComboBox fx:id="toCurrencyComboBox" editable="true" />
     </HBox>
 
     <Button text="Convert" onAction="#convertCurrency" styleClass="equals-button"/>
