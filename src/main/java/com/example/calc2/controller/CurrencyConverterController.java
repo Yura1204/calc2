@@ -6,6 +6,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -52,9 +53,12 @@ public class CurrencyConverterController {
             Map<String, Double> exchangeRates = conversionService.loadExchangeRates();
             List<String> currencies = new ArrayList<>(exchangeRates.keySet());
 
-            // Обновите ComboBox'ы с доступными валютами
-            fromCurrencyComboBox.getItems().addAll(currencies);
-            toCurrencyComboBox.getItems().addAll(currencies);
+            // Список с валютами, которые нужно отображать
+            List<String> desiredCurrencies = Arrays.asList("RUB", "USD", "EUR", "KZT", "CNY", "JPY", "GBP", "CHF", "TRY", "PLN");
+
+            // Обновление ComboBox'ов с доступными валютами, используя только желаемые валюты
+            fromCurrencyComboBox.getItems().addAll(desiredCurrencies);
+            toCurrencyComboBox.getItems().addAll(desiredCurrencies);
 
             // Установите значения по умолчанию для ComboBox'ов
             fromCurrencyComboBox.setValue("USD");
@@ -64,6 +68,5 @@ public class CurrencyConverterController {
             e.printStackTrace();
         }
     }
-
 
 }
