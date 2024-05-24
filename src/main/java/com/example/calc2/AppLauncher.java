@@ -12,7 +12,6 @@ public class AppLauncher extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(AppLauncher.class.getResource("/com/example/calc2/app-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 570, 500);
-//        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         String css = this.getClass().getResource("/com/example/calc2/style.css").toExternalForm();
         scene.getStylesheets().add(css);
         stage.setTitle("Calc");

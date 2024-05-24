@@ -10,22 +10,22 @@
 
     <TabPane VBox.vgrow="ALWAYS" style="-fx-background-color: White;">
         <tabs>
-            <Tab text="Calculator" closable="false">
+            <Tab text="Калькулятор" closable="false">
                 <content>
                     <fx:include source="Calculator.fxml" fx:id="CalculatorTab" />
                 </content>
             </Tab>
-            <Tab text="Unit Converter" closable="false">
+            <Tab text="Конвертер величин" closable="false">
                 <content>
                     <fx:include source="unitConverter.fxml" fx:id="unitConverterTab" />
                 </content>
             </Tab>
-            <Tab text="Currency Converter" closable="false">
+            <Tab text="Конвертер валют" closable="false">
                 <content>
                     <fx:include source="CurrencyConverter.fxml" />
                 </content>
             </Tab>
-            <Tab text="Settings" closable="false">
+            <Tab text="Настройки" closable="false">
                 <content>
                     <fx:include source="Settings.fxml" />
                 </content>

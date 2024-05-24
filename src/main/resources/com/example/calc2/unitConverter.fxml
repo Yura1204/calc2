@@ -9,25 +9,23 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
-    <Label text="Unit Converter" styleClass="title-label" />
+    <Label text="Конвертер величин" styleClass="title-label" />
 
     <HBox spacing="10">
-        <Label text="Select Category:" />
+        <Label text="Выберите категорию:" />
         <ComboBox fx:id="categoryComboBox" />
     </HBox>
 
     <HBox spacing="10">
-        <Label text="From:" />
         <TextField fx:id="fromTextField" />
         <ComboBox fx:id="fromUnitComboBox" />
     </HBox>
 
     <HBox spacing="25">
-        <Label text="To:" />
         <TextField fx:id="toTextField" />
         <ComboBox fx:id="toUnitComboBox"/>
     </HBox>
 
-    <Button text="Convert" onAction="#convertUnits" styleClass="equals-button"/>
+    <Button text="Конвертировать" onAction="#convertUnits" styleClass="equals-button"/>
 
 </VBox>

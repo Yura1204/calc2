@@ -13,17 +13,15 @@
     <Label text="Для работы требуется API ключ, введите его во вкладке Settings" styleClass="warning-label"/>
 
     <HBox spacing="10">
-        <Label text="From:" />
         <TextField fx:id="fromAmountTextField" />
         <ComboBox fx:id="fromCurrencyComboBox" />
     </HBox>
 
     <HBox spacing="10">
-        <Label text="To:" />
         <TextField fx:id="toAmountTextField" editable="false"/>
         <ComboBox fx:id="toCurrencyComboBox" />
     </HBox>
 
-    <Button text="Convert" onAction="#convertCurrency" styleClass="equals-button"/>
+    <Button text="Конвертировать" onAction="#convertCurrency" styleClass="equals-button"/>
 
 </VBox>
