@@ -30,7 +30,6 @@
                     <fx:include source="Settings.fxml" />
                 </content>
             </Tab>
-            <!-- Вы можете добавить сколько угодно вкладок, какие вам нужны. -->
         </tabs>
     </TabPane>
 
