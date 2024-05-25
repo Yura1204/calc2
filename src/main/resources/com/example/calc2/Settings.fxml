@@ -10,11 +10,11 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
-    <Label text="API Key" styleClass="title-label" />
+    <Label text="API ключ" styleClass="title-label" />
 
-    <TextField fx:id="apiKeyTextField" promptText="Enter your API key" />
+    <TextField fx:id="apiKeyTextField" promptText="Введите свой API ключ" />
     <Label text="Использовать Exchange Rates API" styleClass="warning-label" />
-    <Label text="Внимание: Нажав на кнопку «Save», приложение будет выключено." styleClass="warning-label" />
+    <Label text="Внимание: Нажав на кнопку «Сохранить», приложение будет выключено." styleClass="warning-label" />
     <Label text="Перезапустите его." styleClass="warning-label"/>
-    <Button text="Save" onAction="#saveApiKey" styleClass="equals-button" />
+    <Button text="Сохранить" onAction="#saveApiKey" styleClass="equals-button" />
 </VBox>
