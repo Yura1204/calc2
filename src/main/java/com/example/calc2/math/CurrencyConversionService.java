@@ -48,13 +48,13 @@ public class CurrencyConversionService {
             HttpResponse<String> response = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
             String jsonResponse = response.body();
 
-            // Преобразуйте полученный JSON-ответ в объект JSONObject
+            // Преобразование полученного JSON-ответа в объект JSONObject
             JSONParser jsonParser = new JSONParser();
             JSONObject jsonObject = (JSONObject) jsonParser.parse(jsonResponse);
 
-            // Проверьте наличие ключа "rates" в JSON-объекте
+            // Проверка наличия ключа "rates" в JSON-объекте
             if (jsonObject.containsKey("rates")) {
-                // Если ключ "rates" присутствует, извлеките курсы валют из JSON и обновите exchangeRates
+                // Если ключ "rates" присутствует, извлекаем курсы валют из JSON и обновляем exchangeRates
                 JSONObject rates = (JSONObject) jsonObject.get("rates");
                 for (Object key : rates.keySet()) {
                     String currency = (String) key;

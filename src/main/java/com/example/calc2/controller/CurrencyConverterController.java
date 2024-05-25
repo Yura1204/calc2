@@ -60,7 +60,7 @@ public class CurrencyConverterController {
             fromCurrencyComboBox.getItems().addAll(desiredCurrencies);
             toCurrencyComboBox.getItems().addAll(desiredCurrencies);
 
-            // Установите значения по умолчанию для ComboBox'ов
+            // Значения по умолчанию для ComboBox'ов
             fromCurrencyComboBox.setValue("USD");
             toCurrencyComboBox.setValue("EUR");
         } catch (Exception e) {
