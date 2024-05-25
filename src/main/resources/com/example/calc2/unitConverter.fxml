@@ -22,7 +22,7 @@
     </HBox>
 
     <HBox spacing="25">
-        <TextField fx:id="toTextField" />
+        <TextField fx:id="toTextField" editable="false"/>
         <ComboBox fx:id="toUnitComboBox"/>
     </HBox>
 
