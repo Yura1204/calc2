@@ -31,9 +31,6 @@ public class UnitConversionService {
         }
 
 
-
-
-
         // Конвертация Длины
         if (fromUnit.equals("Метры (м)") && toUnit.equals("Футы (ft)")) {
             return value * 3.28084; // Конвертация метров в футы
@@ -60,8 +57,6 @@ public class UnitConversionService {
         } else if (fromUnit.equals("Сантиметры (см)") && toUnit.equals("Футы (ft)")) {
             return value / 30.48; // Конвертация сантиметров в футы
         }
-
-
 
 
         // Конвертация Объема
@@ -151,5 +146,3 @@ public class UnitConversionService {
         return value;
     }
 }
-
-
