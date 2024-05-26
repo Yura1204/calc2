@@ -28,7 +28,8 @@ public class CurrencyConversionService {
 
     public static void loadApiKey() {
         Properties properties = new Properties();
-        try (InputStream input = CurrencyConversionService.class.getResourceAsStream("/com/example/calc2/config.properties")) {
+        try (InputStream input = CurrencyConversionService.class.getResourceAsStream(
+                "/com/example/calc2/config.properties")) {
             properties.load(input);
             apiKey = properties.getProperty("api.key");
         } catch (IOException e) {
