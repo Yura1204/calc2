@@ -14,6 +14,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+/**
+ * Класс, отвечающий за конвертацию валют и получение курсов валют из API.
+ */
 public class CurrencyConversionService {
 
     private static String apiKey;
@@ -25,7 +28,9 @@ public class CurrencyConversionService {
         EXCHANGE_RATES_API_URL = "http://api.exchangeratesapi.io/v1/latest?access_key=" + apiKey;
     }
 
-
+    /**
+     * Загружает ключ API из файла config.properties.
+     */
     public static void loadApiKey() {
         Properties properties = new Properties();
         try (InputStream input = CurrencyConversionService.class.getResourceAsStream(
@@ -38,7 +43,14 @@ public class CurrencyConversionService {
         }
     }
 
-    // Метод для загрузки курсов валют из API и обновления exchangeRates
+    /**
+     * Получает курсы валют из API и обновляет карту exchangeRates.
+     *
+     * @return карта, содержащая последние курсы валют.
+     * @throws IOException          если возникает ошибка ввода-вывода.
+     * @throws ParseException        если возникает ошибка при разборе ответа JSON.
+     * @throws InterruptedException если поток прерывается.
+     */
     public Map<String, Double> loadExchangeRates() throws IOException, ParseException {
         HttpClient httpClient = HttpClient.newHttpClient();
         HttpRequest httpRequest = HttpRequest.newBuilder()
@@ -75,7 +87,14 @@ public class CurrencyConversionService {
     }
 
 
-
+    /**
+     * Конвертирует указанную сумму денег из одной валюты в другую.
+     *
+     * @param amount      сумма денег, которую необходимо конвертировать.
+     * @param fromCurrency валюта, в которой указана сумма денег.
+     * @param toCurrency   валюта, в которую необходимо конвертировать сумму денег.
+     * @return конвертированная сумма денег, или 0.0, если конвертация невозможна.
+     */
     public static double convertCurrency(double amount, String fromCurrency, String toCurrency) {
         if (exchangeRates.containsKey(fromCurrency) && exchangeRates.containsKey(toCurrency)) {
             double fromRate = exchangeRates.get(fromCurrency);
@@ -85,4 +104,3 @@ public class CurrencyConversionService {
         return 0.0;
     }
 }
-
