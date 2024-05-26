@@ -46,10 +46,10 @@ public class CurrencyConverterController {
     @FXML
     private void initialize() {
         try {
-            // Загрузите API-ключ
+            // Загрузка API-ключа
             CurrencyConversionService.loadApiKey();
 
-            // Загрузите курсы валют из API и получите список доступных валют
+            // Загрузка курсов валют из API и получение списока доступных валют
             Map<String, Double> exchangeRates = conversionService.loadExchangeRates();
             List<String> currencies = new ArrayList<>(exchangeRates.keySet());
 
