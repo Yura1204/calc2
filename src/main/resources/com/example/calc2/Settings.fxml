@@ -14,7 +14,7 @@
 
     <TextField fx:id="apiKeyTextField" promptText="Введите свой API ключ" />
     <Label text="Использовать Exchange Rates API" styleClass="warning-label" />
-    <Label text="Внимание: Нажав на кнопку «Сохранить», приложение будет выключено." styleClass="warning-label" />
+    <Label text="Внимание: Нажав на «Сохранить», приложение будет выключено." styleClass="warning-label" />
     <Label text="Перезапустите его." styleClass="warning-label"/>
     <Button text="Сохранить" onAction="#saveApiKey" styleClass="equals-button" />
 </VBox>
